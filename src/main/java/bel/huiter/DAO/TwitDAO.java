@@ -1,10 +1,16 @@
 package bel.huiter.DAO;
 
+import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
-import bel.huiter.models.User;
 
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public interface TwitDAO extends Crud<Twit> {
-    Optional<User> findByOwner(User owner);
+    List<Twit> findTwitsByPeriod(Date from, Date to);
+
+    List<Twit> findTwitsByTopic(String topic);
+
+    List<Twit> findTwitsByTags(ArrayList<Tag> tags);
 }

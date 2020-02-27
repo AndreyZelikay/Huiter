@@ -2,27 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88d9a0a5-4645-4ca5-87a7-48119e6f2de4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Huiter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/CommentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/CommentDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/SessionFactoryUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TagDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TagDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Huiter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Huiter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/12667d9a-2f58-450b-b10f-7c89d2f7af05.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12667d9a-2f58-450b-b10f-7c89d2f7af05.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/TwitDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/TwitDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/TwitDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/TwitDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Comment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Twit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Twit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -51,28 +64,14 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="huiter: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="huiter: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="twit: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="huiter: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -104,7 +103,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -150,6 +149,7 @@
       <updated>1582732491197</updated>
       <workItem from="1582732493606" duration="5888000" />
       <workItem from="1582798421364" duration="2006000" />
+      <workItem from="1582809561741" duration="19382000" />
     </task>
     <servers />
   </component>
@@ -157,6 +157,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1582809697097">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1582809697097" />
+    <state x="552" y="178" key="#Auto_Import" timestamp="1582827242441">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Auto_Import/0.0.1920.1040@0.0.1920.1040" timestamp="1582827242441" />
     <state x="360" y="0" width="575" height="680" key="#Main" timestamp="1582798569163">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -169,40 +177,64 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582743555657" />
-    <state x="510" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1582799809052">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582830486139">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582799809052" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582742427438" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1582799179346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582830486139" />
+    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1582822677397">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582822677397" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1582829806506">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582744031154" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1582799179346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582829806506" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1582829806505">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582744031154" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1582799179345">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582829806505" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1582829806505">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582799179345" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582744031154" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1582799179346">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582829806505" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1582829806506">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582744031154" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582829806506" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582829809197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582829809197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582829809197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582829809197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582829809197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582829809197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582829809197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582829809197" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1582819518437">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582819518437" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1582743577342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582743577342" />
-    <state x="437" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582798421328">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1582809562642">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="224" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582798421328" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582732495276" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582809562642" />
     <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582809464912">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
