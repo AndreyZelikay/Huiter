@@ -11,6 +11,9 @@ public class Main {
         Configuration configuration = new Configuration().configure();
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
-        session.save(new User());
+        User user  = new User();
+        user.setUserName("andrey");
+        user.setStatus("ADMIN");
+
     }
 }

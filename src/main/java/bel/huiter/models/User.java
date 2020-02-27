@@ -9,17 +9,31 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private String userName;
+
+    private String password;
+
     @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
     private List<Twit> twits;
 
+    private String status;
+
     public User() {}
 
-    public long getId() {
-        return id;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public List<Twit> getTwits() {
@@ -28,5 +42,13 @@ public class User {
 
     public void setTwits(List<Twit> twits) {
         this.twits = twits;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
