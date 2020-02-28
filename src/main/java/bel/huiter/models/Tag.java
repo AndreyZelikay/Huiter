@@ -1,5 +1,7 @@
 package bel.huiter.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public class Tag {
     @JoinColumn(name = "body")
     private String body;
 
+    @JsonBackReference
     @ManyToMany(mappedBy = "tags")
     private List<Twit> twits;
 

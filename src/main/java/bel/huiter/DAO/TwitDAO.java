@@ -8,9 +8,9 @@ import java.util.Date;
 import java.util.List;
 
 public interface TwitDAO extends Crud<Twit> {
-    List<Twit> findTwitsByPeriod(Date from, Date to);
+    List<Twit> findByPeriod(Date from, Date until);
 
-    List<Twit> findTwitsByTopic(String topic);
+    List<Twit> findByTopic(String topic);
 
-    List<Twit> findTwitsByTags(ArrayList<Tag> tags);
+    List<Twit> findByTags(ArrayList<Tag> tags);
 }

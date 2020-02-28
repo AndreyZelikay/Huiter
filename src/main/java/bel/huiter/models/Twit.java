@@ -1,10 +1,15 @@
 package bel.huiter.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 @Entity
 @Table(name = "twit")
 public class Twit {
@@ -23,8 +28,8 @@ public class Twit {
     @JoinColumn(name = "topic")
     private String topic;
 
-    @OneToMany(mappedBy = "twit", fetch = FetchType.LAZY)
-    private List<Comment> comments;
+    @OneToMany(mappedBy = "twit", fetch = FetchType.EAGER)
+    private Set<Comment> comments;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "twit_tag",
@@ -66,11 +71,11 @@ public class Twit {
         this.topic = topic;
     }
 
-    public List<Comment> getComments() {
+    public Set<Comment> getComments() {
         return comments;
     }
 
-    public void setComments(List<Comment> comments) {
+    public void setComments(Set<Comment> comments) {
         this.comments = comments;
     }
 

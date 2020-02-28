@@ -55,26 +55,27 @@ public class TwitDAOImpl implements TwitDAO {
     }
 
     @Override
-    public List<Twit> findTwitsByPeriod(Date from, Date to) {
+    public List<Twit> findByPeriod(Date from, Date until) {
         Session session = sessionFactory.openSession();
-        Query<Twit> query = session.createQuery("from Twit where date >= :from and date <= :to", Twit.class);
+        Query<Twit> query = session.createQuery("from Twit where date >= :from and date <= :until", Twit.class);
         query.setParameter("from", from);
-        query.setParameter("to", to);
+        query.setParameter("until", until);
         session.close();
         return query.list();
     }
 
     @Override
-    public List<Twit> findTwitsByTopic(String topic) {
+    public List<Twit> findByTopic(String topic) {
         Session session = sessionFactory.openSession();
         Query<Twit> query = session.createQuery("from Twit where topic = :topic", Twit.class);
         query.setParameter("topic", topic);
+        List<Twit> result = query.list();
         session.close();
-        return query.list();
+        return result;
     }
 
     @Override
-    public List<Twit> findTwitsByTags(ArrayList<Tag> tags) {
+    public List<Twit> findByTags(ArrayList<Tag> tags) {
         Session session = sessionFactory.openSession();
         StringBuilder hqlQuery = new StringBuilder();
         hqlQuery.append("select distinct t from Twit t join t.tags c where c.id =").append(tags.get(0).getId());
