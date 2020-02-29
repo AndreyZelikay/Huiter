@@ -51,10 +51,11 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public Optional<User> findByName(String name) {
+    public Optional<User> findByNameAndPassword(String name, String password) {
         Session session = sessionFactory.openSession();
-        Query<User> query = session.createQuery("from User where name = :name", User.class);
+        Query<User> query = session.createQuery("from User where name = :name and password = :password", User.class);
         query.setParameter("name", name);
+        query.setParameter("password", password);
         Optional<User> user = query.uniqueResultOptional();
         session.close();
         return user;

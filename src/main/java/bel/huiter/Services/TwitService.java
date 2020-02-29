@@ -18,11 +18,15 @@ public class TwitService {
         twitDAO = new TwitDAOImpl();
     }
 
-    public void save(Twit twit) {
+    public void saveToDB(Twit twit) {
         twitDAO.save(twit);
     }
 
-    public void update(Twit twit) {
+    public void deleteFromDB(Twit twit) {
+        twitDAO.delete(twit);
+    }
+
+    public void updateInDB(Twit twit) {
         twitDAO.update(twit);
     }
 

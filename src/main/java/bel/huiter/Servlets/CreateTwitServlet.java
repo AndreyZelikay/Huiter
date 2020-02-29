@@ -26,6 +26,6 @@ public class CreateTwitServlet extends HttpServlet {
         String jsonString = req.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
         ObjectMapper objectMapper = new ObjectMapper();
         Twit twit = objectMapper.readValue(jsonString, Twit.class);
-        twitService.save(twit);
+        twitService.saveToDB(twit);
     }
 }

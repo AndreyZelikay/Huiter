@@ -1,38 +1,42 @@
 package bel.huiter.models;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
 @Entity
 public class User {
+    @JsonView({bel.huiter.Json.JsonView.User.class, bel.huiter.Json.JsonView.JWT.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "id")
     private long id;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class, bel.huiter.Json.JsonView.JWT.class})
     @JoinColumn(name = "name")
     private String name;
 
+    @JsonView(bel.huiter.Json.JsonView.User.class)
     @JoinColumn(name = "password")
     private String password;
 
+    @JsonView(bel.huiter.Json.JsonView.User.class)
     @JoinColumn(name = "status")
     private String status;
 
+    @JsonView(bel.huiter.Json.JsonView.User.class)
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Twit> twits;
 
     @JsonIgnore
     @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
     private List<Comment> comments;
+
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    private String base64Img;
 
     public User() {
         twits = new ArrayList<>();
@@ -80,5 +84,17 @@ public class User {
 
     public void setTwits(List<Twit> twits) {
         this.twits = twits;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getBase64Img() {
+        return base64Img;
+    }
+
+    public void setBase64Img(String base64Img) {
+        this.base64Img = base64Img;
     }
 }

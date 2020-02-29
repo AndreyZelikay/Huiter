@@ -1,6 +1,7 @@
 package bel.huiter.models;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
@@ -13,30 +14,37 @@ import java.util.Set;
 @Entity
 @Table(name = "twit")
 public class Twit {
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "id")
     long id;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @JoinColumn(name = "body")
     private String body;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @JoinColumn(name = "topic")
     private String topic;
 
+    @JsonView(bel.huiter.Json.JsonView.Twit.class)
     @OneToMany(mappedBy = "twit", fetch = FetchType.EAGER)
     private Set<Comment> comments;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "twit_tag",
             joinColumns = @JoinColumn(name = "twit_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))
     private Set<Tag> tags;
 
+    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     private Date date;
 
     public long getId() {

@@ -1,5 +1,6 @@
 package bel.huiter.Servlets;
 
+import bel.huiter.Json.JsonView;
 import bel.huiter.Services.TwitService;
 import bel.huiter.models.Twit;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,6 +28,7 @@ public class FindTwitByTopicServlet extends HttpServlet {
         String topic = req.getParameter("topic");
         ObjectMapper objectMapper = new ObjectMapper();
         List<Twit> result = twitService.findByTopic(topic);
-        resp.getWriter().write(objectMapper.writeValueAsString(result));
+        String json = objectMapper.writerWithView(JsonView.Twit.class).writeValueAsString(result);
+        resp.getWriter().write(json);
     }
 }
