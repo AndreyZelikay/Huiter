@@ -1,4 +1,4 @@
-package bel.huiter.Servlets;
+package bel.huiter.Servlets.UserServlets;
 
 import bel.huiter.JWT.JWT;
 import bel.huiter.Json.JsonView;
@@ -31,7 +31,7 @@ public class UserLoginServlet extends HttpServlet {
         if(userService.validateUser(user)) {
             String jwtBody = new ObjectMapper().writerWithView(JsonView.JWT.class).writeValueAsString(user);
             resp.setHeader("token", JWT.createJTW(jwtBody));
-            resp.getWriter().write("success");
+            resp.getWriter().write(objectMapper.writeValueAsString(user));
         } else {
             resp.getWriter().write("failure");
         }

@@ -47,6 +47,12 @@ public class Twit {
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     private Date date;
 
+    @JsonView(bel.huiter.Json.JsonView.Twit.class)
+    private int likes;
+
+    @JsonView(bel.huiter.Json.JsonView.Twit.class)
+    private int dislikes;
+
     public long getId() {
         return id;
     }

@@ -1,4 +1,4 @@
-package bel.huiter.Servlets;
+package bel.huiter.Servlets.TwitServlets;
 
 import bel.huiter.Json.JsonView;
 import bel.huiter.Services.TwitService;

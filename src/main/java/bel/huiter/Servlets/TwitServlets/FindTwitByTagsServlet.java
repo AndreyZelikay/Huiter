@@ -1,4 +1,4 @@
-package bel.huiter.Servlets;
+package bel.huiter.Servlets.TwitServlets;
 
 import bel.huiter.Services.TwitService;
 import bel.huiter.models.Tag;
