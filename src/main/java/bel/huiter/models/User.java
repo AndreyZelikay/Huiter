@@ -1,6 +1,5 @@
 package bel.huiter.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
@@ -31,23 +30,11 @@ public class User {
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Twit> twits;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
-    private List<Comment> comments;
-
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     private String base64Img;
 
     public User() {
         twits = new ArrayList<>();
-    }
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
     }
 
     public long getId() {

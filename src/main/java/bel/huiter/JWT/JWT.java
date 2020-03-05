@@ -5,25 +5,20 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-
-import javax.crypto.spec.SecretKeySpec;
-import java.security.Key;
+import org.apache.commons.codec.digest.DigestUtils;
 
 public class JWT {
 
     public static String createJTW (String body) {
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-        Key signingKey = new SecretKeySpec(SecurityConstants.SECRET.getBytes(),signatureAlgorithm.getJcaName());
         JwtBuilder jwtBuilder = Jwts.builder()
                 .setIssuer(SecurityConstants.ISSUER)
                 .setSubject(body)
-                .signWith(signatureAlgorithm, signingKey);
+                .signWith(signatureAlgorithm, DigestUtils.md5(SecurityConstants.SECRET));
         return jwtBuilder.compact();
     }
 
     public static Claims decodeJWT(String token) {
-        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-        Key signingKey = new SecretKeySpec(SecurityConstants.SECRET.getBytes(),signatureAlgorithm.getJcaName());
-        return Jwts.parser().setSigningKey(signingKey).parseClaimsJws(token).getBody();
+        return Jwts.parser().setSigningKey(DigestUtils.md5(SecurityConstants.SECRET)).parseClaimsJws(token).getBody();
     }
 }

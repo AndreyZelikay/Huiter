@@ -1,6 +1,7 @@
 package bel.huiter.Servlets.UserServlets;
 
 import bel.huiter.JWT.JWT;
+import bel.huiter.Json.JsonView;
 import bel.huiter.Services.UserService;
 import bel.huiter.models.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Optional;
 
-@WebServlet("/user/twits")
-public class GetTwitsServlet extends HttpServlet {
+@WebServlet("/user/getUser")
+public class GetUserServlet extends HttpServlet {
 
     private UserService userService;
 
@@ -30,7 +31,8 @@ public class GetTwitsServlet extends HttpServlet {
         User user = objectMapper.readValue(JWT.decodeJWT(jwt).getSubject(), User.class);
         Optional<User> userOptional = userService.findById(user.getId());
         if(userOptional.isPresent()) {
-            resp.getWriter().write(objectMapper.writeValueAsString(userOptional.get().getTwits()));
+            resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class)
+                    .writeValueAsString(userOptional.get()));
         } else {
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }

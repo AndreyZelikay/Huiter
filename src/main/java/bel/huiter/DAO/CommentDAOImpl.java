@@ -1,9 +1,12 @@
 package bel.huiter.DAO;
 
 import bel.huiter.models.Comment;
+import bel.huiter.models.Twit;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
+import java.util.List;
 import java.util.Optional;
 
 public class CommentDAOImpl implements CommentDAO {
@@ -47,5 +50,15 @@ public class CommentDAOImpl implements CommentDAO {
         session.delete(object);
         session.getTransaction().commit();
         session.close();
+    }
+
+    @Override
+    public List<Comment> findByTwitID(long id) {
+        Session session = sessionFactory.openSession();
+        Query<Comment> query = session.createQuery("from Comment where twit.id = :twitId",Comment.class);
+        query.setParameter("twitId", id);
+        List<Comment> result = query.list();
+        session.close();
+        return result;
     }
 }

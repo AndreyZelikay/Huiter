@@ -31,7 +31,7 @@ public class UserLoginServlet extends HttpServlet {
         if(userService.validateUser(user)) {
             String jwtBody = new ObjectMapper().writerWithView(JsonView.JWT.class).writeValueAsString(user);
             resp.setHeader("token", JWT.createJTW(jwtBody));
-            resp.getWriter().write(objectMapper.writeValueAsString(user));
+            resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class).writeValueAsString(user));
         } else {
             resp.getWriter().write("failure");
         }

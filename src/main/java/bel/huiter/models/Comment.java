@@ -1,24 +1,23 @@
 package bel.huiter.models;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
 @Entity
 public class Comment {
 
+    @JsonView(bel.huiter.Json.JsonView.Comment.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "id")
     long id;
 
+    @JsonView(bel.huiter.Json.JsonView.Comment.class)
     @JoinColumn(name = "body")
     private String body;
 
+    @JsonView(bel.huiter.Json.JsonView.Comment.class)
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;

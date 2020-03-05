@@ -5,11 +5,10 @@ import bel.huiter.JWT.SecurityConstants;
 import io.jsonwebtoken.Claims;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter("/twit/*")
+//@WebFilter("/twit/*")
 public class AuthorizationFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

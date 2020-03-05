@@ -3,6 +3,7 @@ package bel.huiter.Services;
 import bel.huiter.DAO.UserDAO;
 import bel.huiter.DAO.UserDAOImpl;
 import bel.huiter.models.User;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import java.util.Optional;
 
@@ -19,7 +20,8 @@ public class UserService {
     }
 
     public boolean validateUser(User user) {
-        return userDAO.findByNameAndPassword(user.getName(),user.getPassword()).isPresent();
+        String password = DigestUtils.md5Hex(user.getPassword());
+        return userDAO.findByNameAndPassword(user.getName(), password).isPresent();
     }
 
     public void saveToDB(User user) {

@@ -6,4 +6,6 @@ public class JsonView {
     public static class Twit{}
 
     public static class JWT{}
+
+    public static class Comment{}
 }

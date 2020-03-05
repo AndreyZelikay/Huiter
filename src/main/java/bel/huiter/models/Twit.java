@@ -33,9 +33,6 @@ public class Twit {
     @JoinColumn(name = "topic")
     private String topic;
 
-    @OneToMany(mappedBy = "twit", fetch = FetchType.LAZY)
-    private Set<Comment> comments;
-
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "twit_tag",
@@ -82,14 +79,6 @@ public class Twit {
 
     public void setTopic(String topic) {
         this.topic = topic;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
     }
 
     public Set<Tag> getTags() {

@@ -1,5 +1,6 @@
 package bel.huiter.Servlets.TwitServlets;
 
+import bel.huiter.Json.JsonView;
 import bel.huiter.Services.TwitService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 
 @WebServlet("/twit/getTwitsInInterval")
 public class GetTwitsInIntervalServlet extends HttpServlet {
@@ -25,7 +27,8 @@ public class GetTwitsInIntervalServlet extends HttpServlet {
         int from = Integer.parseInt(req.getParameter("from"));
         int to =  Integer.parseInt(req.getParameter("to"));
         ObjectMapper objectMapper = new ObjectMapper();
-        String json = objectMapper.writeValueAsString(twitService.getTwitsInInterval(from, to));
+        String json = objectMapper.writerWithView(JsonView.Twit.class)
+                .writeValueAsString(twitService.getTwitsInInterval(from, to));
         resp.getWriter().write(json);
     }
 }
