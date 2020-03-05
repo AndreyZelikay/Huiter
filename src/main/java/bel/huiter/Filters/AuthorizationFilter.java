@@ -3,7 +3,6 @@ package bel.huiter.Filters;
 import bel.huiter.JWT.JWT;
 import bel.huiter.JWT.SecurityConstants;
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.SignatureException;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -29,7 +28,7 @@ public class AuthorizationFilter implements Filter {
                 servletResponse.getWriter().write("invalid token");
             }
         }
-        catch(SignatureException e) {
+        catch(Exception e) {
             servletResponse.getWriter().write(e.getMessage());
         }
     }

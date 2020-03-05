@@ -75,6 +75,17 @@ public class TwitDAOImpl implements TwitDAO {
     }
 
     @Override
+    public List<Twit> getTwitsInInterval(int from, int to) {
+        Session session = sessionFactory.openSession();
+        Query<Twit> query = session.createQuery("from Twit", Twit.class);
+        query.setFirstResult(from);
+        query.setMaxResults(to);
+        List<Twit> result = query.list();
+        session.close();
+        return result;
+    }
+
+    @Override
     public List<Twit> findByTags(ArrayList<Tag> tags) {
         Session session = sessionFactory.openSession();
         StringBuilder hqlQuery = new StringBuilder();

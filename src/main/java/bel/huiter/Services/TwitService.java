@@ -46,4 +46,8 @@ public class TwitService {
         return twitDAO.findByTags(tags);
     }
 
+    public List<Twit> getTwitsInInterval(int from, int to) {
+        return twitDAO.getTwitsInInterval(from, to);
+    }
+
 }

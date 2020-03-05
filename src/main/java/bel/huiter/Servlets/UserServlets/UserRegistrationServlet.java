@@ -1,5 +1,6 @@
 package bel.huiter.Servlets.UserServlets;
 
+import bel.huiter.JWT.JWT;
 import bel.huiter.Services.UserService;
 import bel.huiter.models.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,7 +27,10 @@ public class UserRegistrationServlet extends HttpServlet {
         String jsonString = req.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
         ObjectMapper mapper = new ObjectMapper();
         User user = mapper.readValue(jsonString, User.class);
-        user.setStatus("USER");
-        userService.saveToDB(user);
+        if(userService.validateUser(user)) {
+            user.setStatus("USER");
+            userService.saveToDB(user);
+            resp.getWriter().write(JWT.createJTW(mapper.writeValueAsString(user)));
+        }
     }
 }

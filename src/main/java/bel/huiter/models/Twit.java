@@ -33,8 +33,7 @@ public class Twit {
     @JoinColumn(name = "topic")
     private String topic;
 
-    @JsonView(bel.huiter.Json.JsonView.Twit.class)
-    @OneToMany(mappedBy = "twit", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "twit", fetch = FetchType.LAZY)
     private Set<Comment> comments;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
@@ -107,5 +106,29 @@ public class Twit {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(int dislikes) {
+        this.dislikes = dislikes;
+    }
+
+    public void addLIke() {
+        likes++;
+    }
+
+    public void addDislike() {
+        dislikes++;
     }
 }

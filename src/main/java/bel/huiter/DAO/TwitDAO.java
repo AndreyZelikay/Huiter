@@ -12,5 +12,7 @@ public interface TwitDAO extends Crud<Twit> {
 
     List<Twit> findByTopic(String topic);
 
+    List<Twit> getTwitsInInterval(int form, int to);
+
     List<Twit> findByTags(ArrayList<Tag> tags);
 }
