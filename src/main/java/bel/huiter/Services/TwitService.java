@@ -4,11 +4,12 @@ import bel.huiter.DAO.TwitDAO;
 import bel.huiter.DAO.TwitDAOImpl;
 import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
+import bel.huiter.models.User;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public class TwitService {
 
@@ -34,20 +35,7 @@ public class TwitService {
         return twitDAO.find(id);
     }
 
-    public List<Twit> findByPeriodTime(Date from, Date until) {
-        return twitDAO.findByPeriod(from, until);
+    public List<Twit> findTwits(int from, int to, Optional<Date> fromDate, Optional<Date> untilDate, Optional<User> owner, List<Tag> tags) {
+        return twitDAO.findTwits(from, to, fromDate, untilDate, owner, tags);
     }
-
-    public List<Twit> findByTopic(String topic) {
-        return twitDAO.findByTopic(topic);
-    }
-
-    public List<Twit> findByTags(ArrayList<Tag> tags) {
-        return twitDAO.findByTags(tags);
-    }
-
-    public List<Twit> getTwitsInInterval(int from, int to) {
-        return twitDAO.getTwitsInInterval(from, to);
-    }
-
 }

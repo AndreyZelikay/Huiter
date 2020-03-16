@@ -60,4 +60,15 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return user;
     }
+
+    @Override
+    public Optional<User> findByName(String name) {
+        Session session = sessionFactory.openSession();
+        Query<User> query = session.createQuery("from User where name = :name", User.class);
+        query.setParameter("name", name);
+        Optional<User> user = query.uniqueResultOptional();
+        session.close();
+        return user;
+    }
+
 }

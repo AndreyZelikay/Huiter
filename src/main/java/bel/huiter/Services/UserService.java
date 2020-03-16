@@ -28,6 +28,10 @@ public class UserService {
         userDAO.save(user);
     }
 
+    public Optional<User> findByName(String name) {
+        return userDAO.findByName(name);
+    }
+
     public void updateInDB(User user) {
         userDAO.update(user);
     }

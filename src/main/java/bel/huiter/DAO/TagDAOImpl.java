@@ -3,6 +3,7 @@ package bel.huiter.DAO;
 import bel.huiter.models.Tag;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.util.Optional;
 
@@ -47,5 +48,15 @@ public class TagDAOImpl implements TagDAO {
         session.delete(object);
         session.getTransaction().commit();
         session.close();
+    }
+
+    @Override
+    public Optional<Tag> findByBody(String body) {
+        Session session = sessionFactory.openSession();
+        Query<Tag> query = session.createQuery("from Tag where body = :body", Tag.class);
+        query.setParameter("body", body);
+        Optional<Tag> tag = query.uniqueResultOptional();
+        session.close();
+        return tag;
     }
 }

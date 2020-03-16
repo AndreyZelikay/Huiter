@@ -2,11 +2,11 @@ package bel.huiter.DAO;
 
 import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
+import bel.huiter.models.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -55,48 +55,22 @@ public class TwitDAOImpl implements TwitDAO {
     }
 
     @Override
-    public List<Twit> findByPeriod(Date from, Date until) {
+    public List<Twit> findTwits(int from, int to, Optional<Date> fromDate, Optional<Date> untilDate, Optional<User> owner, List<Tag> tags) {
         Session session = sessionFactory.openSession();
-        Query<Twit> query = session.createQuery("from Twit where date >= :from and date <= :until", Twit.class);
-        query.setParameter("from", from);
-        query.setParameter("until", until);
-        session.close();
-        return query.list();
-    }
-
-    @Override
-    public List<Twit> findByTopic(String topic) {
-        Session session = sessionFactory.openSession();
-        Query<Twit> query = session.createQuery("from Twit where topic = :topic", Twit.class);
-        query.setParameter("topic", topic);
-        List<Twit> result = query.list();
-        session.close();
-        return result;
-    }
-
-    @Override
-    public List<Twit> getTwitsInInterval(int from, int to) {
-        Session session = sessionFactory.openSession();
-        Query<Twit> query = session.createQuery("from Twit", Twit.class);
+        String hqlString = "from Twit twit where ((select count(tag) from Tag tag join tag.twits t where t = twit and tag in (:tags)) >= :size)" +
+                "and (:from = null or twit.date >= :from) " +
+                "and (:until = null or twit.date <= :until) " +
+                "and (:owner = null or twit.owner = :owner)";
+        Query<Twit> query = session.createQuery(hqlString, Twit.class);
         query.setFirstResult(from);
         query.setMaxResults(to);
+        query.setParameter("from", fromDate.orElse(null));
+        query.setParameter("until", untilDate.orElse(null));
+        query.setParameter("owner", owner.orElse(null));
+        query.setParameterList("tags", tags);
+        query.setParameter("size",(long) tags.size());
         List<Twit> result = query.list();
         session.close();
-        return result;
-    }
-
-    @Override
-    public List<Twit> findByTags(ArrayList<Tag> tags) {
-        Session session = sessionFactory.openSession();
-        StringBuilder hqlQuery = new StringBuilder();
-        hqlQuery.append("select distinct t from Twit t join t.tags c where c.id =").append(tags.get(0).getId());
-        for(Tag tag: tags.subList(1, tags.size())) {
-            hqlQuery.append(" or c.id = ").append(tag.getId());
-        }
-        Query<Twit> query = session.createQuery(hqlQuery.toString(), Twit.class);
-        List<Twit> result = query.list();
-        session.close();
-        result.removeIf(a->a.getTags().size() != tags.size());
         return result;
     }
 }
