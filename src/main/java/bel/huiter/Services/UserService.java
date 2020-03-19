@@ -19,9 +19,9 @@ public class UserService {
         return userDAO.find(id);
     }
 
-    public boolean validateUser(User user) {
+    public Optional<User> findUserInDB(User user) {
         String password = DigestUtils.md5Hex(user.getPassword());
-        return userDAO.findByNameAndPassword(user.getName(), password).isPresent();
+        return userDAO.findByNameAndPassword(user.getName(), password);
     }
 
     public void saveToDB(User user) {

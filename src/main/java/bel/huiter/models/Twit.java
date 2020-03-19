@@ -49,6 +49,10 @@ public class Twit {
     @JsonView(bel.huiter.Json.JsonView.Twit.class)
     private int dislikes;
 
+    @JsonView(bel.huiter.Json.JsonView.Twit.class)
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<Photo> photos;
+
     public long getId() {
         return id;
     }
@@ -119,5 +123,13 @@ public class Twit {
 
     public void addDislike() {
         dislikes++;
+    }
+
+    public Set<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(Set<Photo> photos) {
+        this.photos = photos;
     }
 }

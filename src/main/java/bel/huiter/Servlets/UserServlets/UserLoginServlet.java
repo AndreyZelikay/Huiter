@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Optional;
 
 @WebServlet("/user/login")
 public class UserLoginServlet extends HttpServlet {
@@ -28,10 +29,11 @@ public class UserLoginServlet extends HttpServlet {
         String json = req.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
         ObjectMapper objectMapper = new ObjectMapper();
         User user = objectMapper.readValue(json, User.class);
-        if(userService.validateUser(user)) {
-            String jwtBody = new ObjectMapper().writerWithView(JsonView.JWT.class).writeValueAsString(user);
+        Optional<User> userOptional = userService.findUserInDB(user);
+        if(userOptional.isPresent()) {
+            String jwtBody = new ObjectMapper().writerWithView(JsonView.JWT.class).writeValueAsString(userOptional.get());
             resp.setHeader("token", JWT.createJTW(jwtBody));
-            resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class).writeValueAsString(user));
+            resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class).writeValueAsString(userOptional.get()));
         } else {
             resp.getWriter().write("failure");
         }

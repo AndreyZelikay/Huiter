@@ -12,5 +12,6 @@
         <mapping class="bel.huiter.models.User" />
         <mapping class="bel.huiter.models.Comment"/>
         <mapping class="bel.huiter.models.Tag" />
+        <mapping class="bel.huiter.models.Photo" />
     </session-factory>
 </hibernate-configuration>

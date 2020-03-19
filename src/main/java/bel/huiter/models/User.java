@@ -1,5 +1,6 @@
 package bel.huiter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
@@ -8,17 +9,21 @@ import java.util.List;
 
 @Entity
 public class User {
-    @JsonView({bel.huiter.Json.JsonView.User.class, bel.huiter.Json.JsonView.JWT.class})
+    @JsonView({bel.huiter.Json.JsonView.User.class,
+            bel.huiter.Json.JsonView.JWT.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "id")
     private long id;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class, bel.huiter.Json.JsonView.JWT.class})
+    @JsonView({bel.huiter.Json.JsonView.Twit.class,
+            bel.huiter.Json.JsonView.User.class,
+            bel.huiter.Json.JsonView.JWT.class,
+            bel.huiter.Json.JsonView.Comment.class})
     @JoinColumn(name = "name")
     private String name;
 
-    @JsonView(bel.huiter.Json.JsonView.User.class)
+    @JsonIgnore
     @JoinColumn(name = "password")
     private String password;
 
@@ -31,7 +36,9 @@ public class User {
     private List<Twit> twits;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    private String base64Img;
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "photo_id")
+    private Photo userPhoto;
 
     public User() {
         twits = new ArrayList<>();
@@ -77,11 +84,11 @@ public class User {
         this.id = id;
     }
 
-    public String getBase64Img() {
-        return base64Img;
+    public Photo getUserPhoto() {
+        return userPhoto;
     }
 
-    public void setBase64Img(String base64Img) {
-        this.base64Img = base64Img;
+    public void setUserPhoto(Photo userPhoto) {
+        this.userPhoto = userPhoto;
     }
 }

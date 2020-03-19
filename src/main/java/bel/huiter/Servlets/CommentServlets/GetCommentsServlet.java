@@ -1,5 +1,6 @@
 package bel.huiter.Servlets.CommentServlets;
 
+import bel.huiter.Json.JsonView;
 import bel.huiter.Services.CommentService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -23,7 +24,7 @@ public class GetCommentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         long id = Integer.parseInt(req.getParameter("id"));
         ObjectMapper objectMapper = new ObjectMapper();
-        String json  = objectMapper.writeValueAsString(commentService.findByTwitID(id));
+        String json  = objectMapper.writerWithView(JsonView.Comment.class).writeValueAsString(commentService.findByTwitID(id));
         resp.getWriter().write(json);
     }
 }
