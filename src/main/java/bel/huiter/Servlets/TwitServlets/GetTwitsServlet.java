@@ -38,7 +38,6 @@ public class GetTwitsServlet extends HttpServlet {
         Optional<Date> fromDate = Optional.empty();
         Optional<Date> untilDate = Optional.empty();
         try {
-            System.out.println(req.getParameter("fromDate"));
             fromDate = Optional.of(dateFormat.parse(req.getParameter("fromDate")));
             untilDate = Optional.of(dateFormat.parse(req.getParameter("untilDate")));
         } catch (ParseException | NullPointerException ignored) {}

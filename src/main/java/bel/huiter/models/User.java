@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -33,7 +33,7 @@ public class User {
 
     @JsonView(bel.huiter.Json.JsonView.User.class)
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
-    private List<Twit> twits;
+    private Set<Twit> twits;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -41,7 +41,7 @@ public class User {
     private Photo userPhoto;
 
     public User() {
-        twits = new ArrayList<>();
+        twits = new HashSet<>();
     }
 
     public long getId() {
@@ -72,11 +72,11 @@ public class User {
         this.status = status;
     }
 
-    public List<Twit> getTwits() {
+    public Set<Twit> getTwits() {
         return twits;
     }
 
-    public void setTwits(List<Twit> twits) {
+    public void setTwits(Set<Twit> twits) {
         this.twits = twits;
     }
 

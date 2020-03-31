@@ -30,6 +30,7 @@ public class GetUserServlet extends HttpServlet {
         ObjectMapper objectMapper = new ObjectMapper();
         User user = objectMapper.readValue(JWT.decodeJWT(jwt).getSubject(), User.class);
         Optional<User> userOptional = userService.findById(user.getId());
+        System.out.println(userOptional.get().getTwits());
         if(userOptional.isPresent()) {
             resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class)
                     .writeValueAsString(userOptional.get()));

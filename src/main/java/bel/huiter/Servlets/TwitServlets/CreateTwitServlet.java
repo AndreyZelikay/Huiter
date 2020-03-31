@@ -1,6 +1,5 @@
 package bel.huiter.Servlets.TwitServlets;
 
-import bel.huiter.Services.TagService;
 import bel.huiter.Services.TwitService;
 import bel.huiter.models.Twit;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,12 +15,10 @@ import java.io.IOException;
 public class CreateTwitServlet extends HttpServlet {
 
     private TwitService twitService;
-    private TagService tagService;
 
     @Override
     public void init() throws ServletException {
         twitService = new TwitService();
-        tagService = new TagService();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package bel.huiter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +15,7 @@ public class Photo {
     @Column(name = "url")
     private String url;
 
+    @JsonIgnore
     @Column(name = "public_id")
     private String publicId;
 

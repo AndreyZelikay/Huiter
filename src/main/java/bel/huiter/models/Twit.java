@@ -24,7 +24,7 @@ public class Twit {
     @Column(name = "body", columnDefinition = "text")
     private String body;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.Json.JsonView.Twit.class})
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;
