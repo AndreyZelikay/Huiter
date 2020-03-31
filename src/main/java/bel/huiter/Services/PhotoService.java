@@ -34,7 +34,6 @@ public class PhotoService {
         Photo photo = new Photo();
         photo.setUrl(uploadResult.get("url").toString());
         photo.setPublicId(uploadResult.get("public_id").toString());
-        System.out.println(photo.getPublicId());
         return photo;
     }
 

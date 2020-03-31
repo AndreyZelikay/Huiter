@@ -14,7 +14,6 @@ public class Comment {
     long id;
 
     @JsonView(bel.huiter.Json.JsonView.Comment.class)
-    @Lob
     @Column(name = "body", columnDefinition = "text")
     private String body;
 

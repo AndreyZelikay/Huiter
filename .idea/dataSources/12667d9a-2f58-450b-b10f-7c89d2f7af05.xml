@@ -1219,7 +1219,7 @@
     </column>
     <column id="305" parent="285" name="searchCounter">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

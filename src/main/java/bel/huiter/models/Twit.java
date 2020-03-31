@@ -21,7 +21,7 @@ public class Twit {
     long id;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @Column(name = "body")
+    @Column(name = "body", columnDefinition = "text")
     private String body;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
@@ -51,6 +51,9 @@ public class Twit {
 
     @JsonView(bel.huiter.Json.JsonView.Twit.class)
     @OneToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "twit_photo",
+            joinColumns = @JoinColumn(name = "twit_id"),
+            inverseJoinColumns = @JoinColumn(name = "photo_id"))
     private Set<Photo> photos;
 
     public long getId() {
