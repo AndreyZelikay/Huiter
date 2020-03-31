@@ -1,6 +1,5 @@
 package bel.huiter.DAO;
 
-import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
 import bel.huiter.models.User;
 import org.hibernate.Session;
@@ -55,9 +54,9 @@ public class TwitDAOImpl implements TwitDAO {
     }
 
     @Override
-    public List<Twit> findTwits(int from, int to, Optional<Date> fromDate, Optional<Date> untilDate, Optional<User> owner, List<Tag> tags) {
+    public List<Twit> findTwits(int from, int to, Optional<Date> fromDate, Optional<Date> untilDate, Optional<User> owner, List<String> tags) {
         Session session = sessionFactory.openSession();
-        String hqlString = "from Twit twit where ((select count(tag) from Tag tag join tag.twits t where t = twit and tag in (:tags)) >= :size)" +
+        String hqlString = "from Twit twit where ((select count(tag) from Tag tag join tag.twits t where t = twit and tag.body in (:tags)) >= :size)" +
                 "and (:from = null or twit.date >= :from) " +
                 "and (:until = null or twit.date <= :until) " +
                 "and (:owner = null or twit.owner = :owner)";

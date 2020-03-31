@@ -10,15 +10,18 @@ public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     long id;
 
-    @JoinColumn(name = "body")
+    @Column(name = "body")
     private String body;
 
     @JsonBackReference
     @ManyToMany(mappedBy = "tags")
     private List<Twit> twits;
+
+    @Column(name = "searchCounter")
+    private long searchCounter;
 
     public long getId() {
         return id;
@@ -42,5 +45,13 @@ public class Tag {
 
     public void setTwits(List<Twit> twits) {
         this.twits = twits;
+    }
+
+    public long getSearchCounter() {
+        return searchCounter;
+    }
+
+    public void setSearchCounter(long searchCounter) {
+        this.searchCounter = searchCounter;
     }
 }

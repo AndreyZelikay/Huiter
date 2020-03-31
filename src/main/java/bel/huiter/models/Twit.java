@@ -17,11 +17,11 @@ public class Twit {
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     long id;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @JoinColumn(name = "body")
+    @Column(name = "body")
     private String body;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
@@ -30,11 +30,11 @@ public class Twit {
     private User owner;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @JoinColumn(name = "topic")
+    @Column(name = "topic")
     private String topic;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "twit_tag",
             joinColumns = @JoinColumn(name = "twit_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))

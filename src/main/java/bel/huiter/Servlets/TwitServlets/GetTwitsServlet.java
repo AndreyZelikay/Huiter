@@ -1,10 +1,8 @@
 package bel.huiter.Servlets.TwitServlets;
 
 import bel.huiter.Json.JsonView;
-import bel.huiter.Services.TagService;
 import bel.huiter.Services.TwitService;
 import bel.huiter.Services.UserService;
-import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
 import bel.huiter.models.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,13 +22,11 @@ public class GetTwitsServlet extends HttpServlet {
 
     private TwitService twitService;
     private UserService userService;
-    private TagService tagService;
 
     @Override
     public void init() {
         twitService = new TwitService();
         userService = new UserService();
-        tagService = new TagService();
     }
 
     @Override
@@ -49,20 +45,16 @@ public class GetTwitsServlet extends HttpServlet {
 
         Optional<User> owner = userService.findByName(req.getParameter("ownerName"));
 
-        String[] tags = req.getParameter("tags").split(" ");
-        List<Tag> tagSet = new ArrayList<>();
-        for(String tag: tags) {
-            tagService.findByBody(tag).ifPresent(tagSet::add);
+        String tagsString = req.getParameter("tags");
+        List<String> tags = new ArrayList<>();
+        if(!tagsString.isEmpty()) {
+            tags = Arrays.asList(req.getParameter("tags").split(" "));
         }
 
-        if(tagSet.isEmpty() && tags.length > 1) {
-            resp.getWriter().write("illegal tags");
-        } else {
-            List<Twit> result = twitService.findTwits(from, to, fromDate, untilDate, owner, tagSet);
-            ObjectMapper objectMapper = new ObjectMapper();
-            String json = objectMapper.writerWithView(JsonView.Twit.class)
-                    .writeValueAsString(result);
-            resp.getWriter().write(json);
-        }
+        List<Twit> result = twitService.findTwits(from, to, fromDate, untilDate, owner, tags);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writerWithView(JsonView.Twit.class)
+                .writeValueAsString(result);
+        resp.getWriter().write(json);
     }
 }

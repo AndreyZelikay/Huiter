@@ -25,7 +25,7 @@ public class UserLoginServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String json = req.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
         ObjectMapper objectMapper = new ObjectMapper();
         User user = objectMapper.readValue(json, User.class);
@@ -35,7 +35,7 @@ public class UserLoginServlet extends HttpServlet {
             resp.setHeader("token", JWT.createJTW(jwtBody));
             resp.getWriter().write(objectMapper.writerWithView(JsonView.User.class).writeValueAsString(userOptional.get()));
         } else {
-            resp.getWriter().write("failure");
+            resp.setStatus(HttpServletResponse.SC_FORBIDDEN);
         }
     }
 }

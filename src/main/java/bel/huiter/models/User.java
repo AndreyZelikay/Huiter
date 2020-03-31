@@ -1,6 +1,6 @@
 package bel.huiter.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
@@ -13,22 +13,22 @@ public class User {
             bel.huiter.Json.JsonView.JWT.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     private long id;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class,
             bel.huiter.Json.JsonView.User.class,
             bel.huiter.Json.JsonView.JWT.class,
             bel.huiter.Json.JsonView.Comment.class})
-    @JoinColumn(name = "name")
+    @Column(name = "name")
     private String name;
 
-    @JsonIgnore
-    @JoinColumn(name = "password")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Column(name = "password")
     private String password;
 
     @JsonView(bel.huiter.Json.JsonView.User.class)
-    @JoinColumn(name = "status")
+    @Column(name = "status")
     private String status;
 
     @JsonView(bel.huiter.Json.JsonView.User.class)
@@ -36,7 +36,7 @@ public class User {
     private List<Twit> twits;
 
     @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @OneToOne(fetch = FetchType.EAGER)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "photo_id")
     private Photo userPhoto;
 

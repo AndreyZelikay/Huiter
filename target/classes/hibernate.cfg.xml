@@ -7,7 +7,7 @@
         <property name="connection.password">9336</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">validate</property>
         <mapping class="bel.huiter.models.Twit" />
         <mapping class="bel.huiter.models.User" />
         <mapping class="bel.huiter.models.Comment"/>

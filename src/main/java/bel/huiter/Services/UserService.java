@@ -5,13 +5,20 @@ import bel.huiter.DAO.UserDAOImpl;
 import bel.huiter.models.User;
 import org.apache.commons.codec.digest.DigestUtils;
 
+import java.io.IOException;
 import java.util.Optional;
 
 public class UserService {
 
     private UserDAO userDAO;
+    private PhotoService photoService;
 
     public UserService() {
+        try {
+            photoService = new PhotoService();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         userDAO = new UserDAOImpl();
     }
 
@@ -37,6 +44,11 @@ public class UserService {
     }
 
     public void deleteFromDB(User user) {
+        try {
+            photoService.delete(user.getUserPhoto());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         userDAO.delete(user);
     }
 }

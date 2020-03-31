@@ -4,7 +4,7 @@ import bel.huiter.DAO.TagDAO;
 import bel.huiter.DAO.TagDAOImpl;
 import bel.huiter.models.Tag;
 
-import java.util.Optional;
+import java.util.List;
 
 public class TagService {
 
@@ -14,7 +14,11 @@ public class TagService {
         tagDAO = new TagDAOImpl();
     }
 
-    public Optional<Tag> findByBody(String body) {
-        return tagDAO.findByBody(body);
+    public List<Tag> getAllTags() {
+        return tagDAO.getAllTags();
+    }
+
+    public void saveToDB(Tag tag) {
+        tagDAO.save(tag);
     }
 }

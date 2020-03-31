@@ -1,62 +1,51 @@
 package bel.huiter.DAO;
 
-import bel.huiter.models.Tag;
+import bel.huiter.models.Photo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 
-import java.util.List;
 import java.util.Optional;
 
-public class TagDAOImpl implements TagDAO {
+public class PhotoDAOImpl implements PhotoDAO {
 
     private SessionFactory sessionFactory;
 
-    public TagDAOImpl(){
+    public PhotoDAOImpl() {
         sessionFactory = SessionFactoryUtil.getInstance().getSessionFactory();
     }
 
     @Override
-    public void save(Tag object) {
+    public void save(Photo photo) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.save(object);
+        session.save(photo);
         session.getTransaction().commit();
         session.close();
     }
 
     @Override
-    public void update(Tag object) {
+    public void update(Photo photo) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.update(object);
+        session.update(photo);
         session.getTransaction().commit();
         session.close();
     }
 
     @Override
-    public Optional<Tag> find(long id) {
+    public Optional<Photo> find(long id) {
         Session session = sessionFactory.openSession();
-        Optional<Tag> tag = Optional.of(session.find(Tag.class,id));
+        Optional<Photo> photo = Optional.of(session.find(Photo.class, id));
         session.close();
-        return tag;
+        return photo;
     }
 
     @Override
-    public void delete(Tag object) {
+    public void delete(Photo photo) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.delete(object);
+        session.delete(photo);
         session.getTransaction().commit();
         session.close();
-    }
-
-    @Override
-    public List<Tag> getAllTags() {
-        Session session = sessionFactory.openSession();
-        Query<Tag> query = session.createQuery("from Tag as tag", Tag.class);
-        List<Tag> result = query.list();
-        session.close();
-        return result;
     }
 }

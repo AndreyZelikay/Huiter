@@ -1127,14 +1127,12 @@
     <table id="284" parent="2" name="photo"/>
     <table id="285" parent="2" name="tag"/>
     <table id="286" parent="2" name="twit"/>
-    <table id="287" parent="2" name="twit_photo">
-      <Engine>MyISAM</Engine>
-    </table>
+    <table id="287" parent="2" name="twit_photo"/>
     <table id="288" parent="2" name="twit_tag"/>
     <table id="289" parent="2" name="user"/>
     <column id="290" parent="283" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
@@ -1146,17 +1144,17 @@
     </column>
     <column id="292" parent="283" name="owner_id">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="293" parent="283" name="twit_id">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="294" parent="283" name="FKdymbnbgxa1jrltkwu1r18yao3">
+    <index id="294" parent="283" name="owner_id">
       <ColNames>owner_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1169,253 +1167,257 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="297" parent="283" name="FKdymbnbgxa1jrltkwu1r18yao3">
-      <ColNames>owner_id</ColNames>
-      <RefTableName>user</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="298" parent="283" name="comment_ibfk_1">
+    <foreign-key id="297" parent="283" name="comment_ibfk_1">
       <ColNames>owner_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="299" parent="283" name="comment_ibfk_2">
+    <foreign-key id="298" parent="283" name="comment_ibfk_2">
       <ColNames>twit_id</ColNames>
       <RefTableName>twit</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="300" parent="284" name="id">
+    <column id="299" parent="284" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="284" name="base64_img">
+    <column id="300" parent="284" name="url">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="284" name="base64IMG">
+    <column id="301" parent="284" name="public_id">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="303" parent="284" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="304" parent="285" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="305" parent="285" name="body">
-      <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="306" parent="285" name="body">
-      <ColNames>body</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="307" parent="285" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="308" parent="285" name="body">
-      <ColNames>body</ColNames>
-      <UnderlyingIndexName>body</UnderlyingIndexName>
-    </key>
-    <column id="309" parent="286" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="310" parent="286" name="topic">
-      <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="286" name="body">
+    <key id="302" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="303" parent="285" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="285" name="body">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="285" name="searchCounter">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="306" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="307" parent="286" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="286" name="topic">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="286" name="body">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="286" name="owner_id">
+    <column id="310" parent="286" name="owner_id">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="286" name="date">
+    <column id="311" parent="286" name="date">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="286" name="dislikes">
+    <column id="312" parent="286" name="dislikes">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="286" name="likes">
+    <column id="313" parent="286" name="likes">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="316" parent="286" name="FKqqks1rq2tmljh4ifku7rty4q8">
+    <index id="314" parent="286" name="FKqqks1rq2tmljh4ifku7rty4q8">
       <ColNames>owner_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="317" parent="286" name="PRIMARY">
+    <key id="315" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="318" parent="286" name="FKqqks1rq2tmljh4ifku7rty4q8">
+    <foreign-key id="316" parent="286" name="FKqqks1rq2tmljh4ifku7rty4q8">
       <ColNames>owner_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="319" parent="286" name="twit_ibfk_1">
+    <foreign-key id="317" parent="286" name="twit_ibfk_1">
       <ColNames>owner_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="320" parent="287" name="Twit_id">
+    <column id="318" parent="287" name="twit_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="287" name="photos_id">
+    <column id="319" parent="287" name="photo_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="322" parent="287" name="UK_43t6x1v26qhkw4te42pqtf4ns">
-      <ColNames>photos_id</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="323" parent="287" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>Twit_id
-photos_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="324" parent="287" name="UK_43t6x1v26qhkw4te42pqtf4ns">
-      <ColNames>photos_id</ColNames>
-      <UnderlyingIndexName>UK_43t6x1v26qhkw4te42pqtf4ns</UnderlyingIndexName>
-    </key>
-    <column id="325" parent="288" name="tag_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="326" parent="288" name="twit_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="327" parent="288" name="FKjb7eyxb5i6rk9owa9pc9o8atc">
-      <ColNames>tag_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="328" parent="288" name="twit_id">
+    <index id="320" parent="287" name="twit_id">
       <ColNames>twit_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="329" parent="288" name="FKjb7eyxb5i6rk9owa9pc9o8atc">
-      <ColNames>tag_id</ColNames>
-      <RefTableName>tag</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="330" parent="288" name="twit_tag_ibfk_1">
-      <ColNames>tag_id</ColNames>
-      <RefTableName>tag</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
-    </foreign-key>
-    <foreign-key id="331" parent="288" name="twit_tag_ibfk_2">
+    <index id="321" parent="287" name="photo_id">
+      <ColNames>photo_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="322" parent="287" name="twit_photo_ibfk_1">
       <ColNames>twit_id</ColNames>
       <RefTableName>twit</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="332" parent="289" name="id">
+    <foreign-key id="323" parent="287" name="twit_photo_ibfk_2">
+      <ColNames>photo_id</ColNames>
+      <RefTableName>photo</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="324" parent="288" name="tag_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="325" parent="288" name="twit_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="326" parent="288" name="tag_id">
+      <ColNames>tag_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="327" parent="288" name="twit_id">
+      <ColNames>twit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="328" parent="288" name="twit_tag_ibfk_1">
+      <ColNames>tag_id</ColNames>
+      <RefTableName>tag</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="329" parent="288" name="twit_tag_ibfk_2">
+      <ColNames>twit_id</ColNames>
+      <RefTableName>twit</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="330" parent="289" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="289" name="name">
+    <column id="331" parent="289" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="289" name="password">
+    <column id="332" parent="289" name="password">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="289" name="status">
+    <column id="333" parent="289" name="status">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="289" name="photo_id">
+    <column id="334" parent="289" name="photo_id">
       <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="337" parent="289" name="name">
+    <index id="335" parent="289" name="name">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="338" parent="289" name="FKj6bv78r7me76f5drxtwmxp9fg">
+    <index id="336" parent="289" name="password">
+      <ColNames>password</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="337" parent="289" name="FKj6bv78r7me76f5drxtwmxp9fg">
       <ColNames>photo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="339" parent="289" name="PRIMARY">
+    <key id="338" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="340" parent="289" name="name">
+    <key id="339" parent="289" name="name">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <key id="340" parent="289" name="password">
+      <ColNames>password</ColNames>
+      <UnderlyingIndexName>password</UnderlyingIndexName>
     </key>
     <foreign-key id="341" parent="289" name="FKj6bv78r7me76f5drxtwmxp9fg">
       <ColNames>photo_id</ColNames>
       <RefTableName>photo</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="342" parent="289" name="user_photo_id_fk">
+    <foreign-key id="342" parent="289" name="user_ibfk_1">
       <ColNames>photo_id</ColNames>
       <RefTableName>photo</RefTableName>
       <RefColNames>id</RefColNames>

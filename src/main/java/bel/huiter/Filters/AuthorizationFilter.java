@@ -7,6 +7,7 @@ import io.jsonwebtoken.Claims;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Date;
 
 //@WebFilter("/twit/*")
 public class AuthorizationFilter implements Filter {
@@ -21,10 +22,13 @@ public class AuthorizationFilter implements Filter {
         try {
             String jwt = httpServletRequest.getHeader("token");
             Claims claims = JWT.decodeJWT(jwt);
-            if (claims != null && claims.getIssuer().equals(SecurityConstants.ISSUER)) {
-                filterChain.doFilter(servletRequest, servletResponse);
-            } else {
+            long currentTimeInMillis = System.currentTimeMillis();
+            if (claims == null || !claims.getIssuer().equals(SecurityConstants.ISSUER)) {
                 servletResponse.getWriter().write("invalid token");
+            } else if(claims.getExpiration().after(new Date(currentTimeInMillis))) {
+                servletResponse.getWriter().write("token expired");
+            } else {
+                filterChain.doFilter(servletRequest, servletResponse);
             }
         }
         catch(Exception e) {

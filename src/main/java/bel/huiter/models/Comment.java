@@ -10,11 +10,12 @@ public class Comment {
     @JsonView(bel.huiter.Json.JsonView.Comment.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     long id;
 
     @JsonView(bel.huiter.Json.JsonView.Comment.class)
-    @JoinColumn(name = "body")
+    @Lob
+    @Column(name = "body", columnDefinition = "text")
     private String body;
 
     @JsonView(bel.huiter.Json.JsonView.Comment.class)

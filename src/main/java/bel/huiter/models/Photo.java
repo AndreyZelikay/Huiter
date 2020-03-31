@@ -7,11 +7,22 @@ public class Photo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     private long id;
 
-    @JoinColumn(name = "base64_img")
-    private String base64IMG;
+    @Column(name = "url")
+    private String url;
+
+    @Column(name = "public_id")
+    private String publicId;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public long getId() {
         return id;
@@ -21,11 +32,11 @@ public class Photo {
         this.id = id;
     }
 
-    public String getBase64IMG() {
-        return base64IMG;
+    public String getPublicId() {
+        return publicId;
     }
 
-    public void setBase64IMG(String base64IMG) {
-        this.base64IMG = base64IMG;
+    public void setPublicId(String publicId) {
+        this.publicId = publicId;
     }
 }
