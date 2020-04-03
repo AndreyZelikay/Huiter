@@ -18,6 +18,10 @@ public class TagService {
         return tagDAO.getAllTags();
     }
 
+    public List<Tag> getAllTagsStartingWith(String start) {
+        return tagDAO.getAllTagsStartingWith(start);
+    }
+
     public void saveToDB(Tag tag) {
         tagDAO.save(tag);
     }

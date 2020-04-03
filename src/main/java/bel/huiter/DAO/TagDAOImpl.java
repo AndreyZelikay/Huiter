@@ -59,4 +59,14 @@ public class TagDAOImpl implements TagDAO {
         session.close();
         return result;
     }
+
+    @Override
+    public List<Tag> getAllTagsStartingWith(String start) {
+        Session session = sessionFactory.openSession();
+        Query<Tag> query = session.createQuery("from Tag as tag where tag.body like :start", Tag.class);
+        query.setParameter("start", start + "%");
+        List<Tag> result = query.list();
+        session.close();
+        return result;
+    }
 }

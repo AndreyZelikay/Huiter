@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TagDAO extends Crud<Tag> {
     List<Tag> getAllTags();
+    List<Tag> getAllTagsStartingWith(String start);
 }
