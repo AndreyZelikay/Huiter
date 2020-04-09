@@ -14,43 +14,39 @@ import java.util.Set;
 @Entity
 @Table(name = "twit")
 public class Twit {
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     long id;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     @Column(name = "body", columnDefinition = "text")
     private String body;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class})
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
-    @Column(name = "topic")
-    private String topic;
-
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "twit_tag",
             joinColumns = @JoinColumn(name = "twit_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))
     private Set<Tag> tags;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     private Date date;
 
-    @JsonView(bel.huiter.Json.JsonView.Twit.class)
+    @JsonView(bel.huiter.json.JsonView.Twit.class)
     private int likes;
 
-    @JsonView(bel.huiter.Json.JsonView.Twit.class)
+    @JsonView(bel.huiter.json.JsonView.Twit.class)
     private int dislikes;
 
-    @JsonView(bel.huiter.Json.JsonView.Twit.class)
-    @OneToMany(fetch = FetchType.EAGER)
+    @JsonView(bel.huiter.json.JsonView.Twit.class)
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinTable(name = "twit_photo",
             joinColumns = @JoinColumn(name = "twit_id"),
             inverseJoinColumns = @JoinColumn(name = "photo_id"))
@@ -78,14 +74,6 @@ public class Twit {
 
     public void setOwner(User owner) {
         this.owner = owner;
-    }
-
-    public String getTopic() {
-        return topic;
-    }
-
-    public void setTopic(String topic) {
-        this.topic = topic;
     }
 
     public Set<Tag> getTags() {

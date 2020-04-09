@@ -7,17 +7,17 @@ import javax.persistence.*;
 @Entity
 public class Comment {
 
-    @JsonView(bel.huiter.Json.JsonView.Comment.class)
+    @JsonView(bel.huiter.json.JsonView.Comment.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     long id;
 
-    @JsonView(bel.huiter.Json.JsonView.Comment.class)
+    @JsonView(bel.huiter.json.JsonView.Comment.class)
     @Column(name = "body", columnDefinition = "text")
     private String body;
 
-    @JsonView(bel.huiter.Json.JsonView.Comment.class)
+    @JsonView(bel.huiter.json.JsonView.Comment.class)
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;

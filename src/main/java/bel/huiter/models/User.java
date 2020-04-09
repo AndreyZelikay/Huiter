@@ -5,21 +5,22 @@ import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 public class User {
-    @JsonView({bel.huiter.Json.JsonView.User.class,
-            bel.huiter.Json.JsonView.JWT.class})
+    @JsonView({bel.huiter.json.JsonView.User.class,
+            bel.huiter.json.JsonView.JWT.class})
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class,
-            bel.huiter.Json.JsonView.User.class,
-            bel.huiter.Json.JsonView.JWT.class,
-            bel.huiter.Json.JsonView.Comment.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class,
+            bel.huiter.json.JsonView.User.class,
+            bel.huiter.json.JsonView.JWT.class,
+            bel.huiter.json.JsonView.Comment.class})
     @Column(name = "name")
     private String name;
 
@@ -27,18 +28,31 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @JsonView(bel.huiter.Json.JsonView.User.class)
+    @JsonView(bel.huiter.json.JsonView.User.class)
     @Column(name = "status")
     private String status;
 
-    @JsonView(bel.huiter.Json.JsonView.User.class)
+    @JsonView(bel.huiter.json.JsonView.User.class)
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private Set<Twit> twits;
 
-    @JsonView({bel.huiter.Json.JsonView.Twit.class, bel.huiter.Json.JsonView.User.class})
+    @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "photo_id")
     private Photo userPhoto;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     public User() {
         twits = new HashSet<>();
