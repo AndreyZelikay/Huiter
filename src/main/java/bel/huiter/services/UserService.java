@@ -10,6 +10,7 @@ import bel.huiter.jwt.JWT;
 import bel.huiter.models.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.exception.ConstraintViolationException;
 
 import java.io.IOException;
@@ -30,9 +31,9 @@ public class UserService {
         userDAO = new UserDAOImpl();
     }
 
-    public boolean loginUser(UserLoginForm form) {
-        Optional<User> userOptional = userDAO.findByNameAndPassword(form.getName(), form.getPassword());
-        return userOptional.isPresent();
+    public Optional<User> loginUser(UserLoginForm form) {
+        return userDAO.
+                findByNameAndPassword(form.getName(), DigestUtils.md5Hex(form.getPassword()));
     }
 
     public void registerUser(UserRegistrationForm form) throws UserRegistrationException {
@@ -44,7 +45,7 @@ public class UserService {
             try {
                 User user = new User();
                 user.setName(form.getName());
-                user.setPassword(form.getPassword());
+                user.setPassword(DigestUtils.md5Hex(form.getPassword()));
                 user.setUserPhoto(photoService.upload(form.getBase64Photo()));
 
                 userDAO.save(user);

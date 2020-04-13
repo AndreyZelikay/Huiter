@@ -7,68 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88d9a0a5-4645-4ca5-87a7-48119e6f2de4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/116c93a1c7f01f312f7c4ceb4b657ab92a78c756" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28c0407f15d810ba54f5534da41eb7d30cb9f850" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/304c42ab1f4dd9bace8607a66ecdcc73bd6acdb0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47fa29818481f70fe47bb3981d21a169b4916afe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/540186e59b1774ee85f57c74987f49fe0fa31955" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83e7fb3d34e593157c1e839ed48ec8b8500bb3b5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/874bd97b23844fac58136bcd40e737ea51f941af" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cb8ee0dd6535fa14beb6a0ecfc7dca9632e586c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fd5d6132b196e2faee23600ce88c471c3e72069" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0178c565050f7ad4c9070797cdc723fb504d703" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b004c0480358ae1505b0a0c02402b7a632122419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b41abf47647379224d020818fb76d1fa9beb01aa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b53a5ae5291762bb65ef25e32ebe80374c716578" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba9016c8c946f896d7dec672322753d34916d799" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/deb776ae779499472a6192f58babc21df784819c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f74504097f29ce7038501fa79db14842dcfafa69" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdc16df95f85341f5c34cefe531f0676a9ac6adb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentCreateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentDeleteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentUpdateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/PhotoUploadException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitCreationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitDeleteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitUpdateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/UserRegistrationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/CommentValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/FormValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/TwitValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/UserRegistrationValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/ValidationConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/CommentForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/TwitForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/TwitSearchForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/UserLoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/UserRegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Huiter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Huiter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/009782d8a8e28be4f3280018f48d15f7a344ad95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/PhotoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TwitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TwitService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/CreateCommentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/comment_servlets/CreateCommentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/GetCommentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/comment_servlets/GetCommentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TagServlets/GetTagsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/tag_servlets/GetTagsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/CreateTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/CreateTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/DeleteTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/DeleteTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/GetTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitsServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/PostLikeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/SearchTwitsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/UpdateTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/UpdateTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/GetCurrentUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserRegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserRegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserLoginServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +293,7 @@
       <workItem from="1586618426946" duration="4325000" />
       <workItem from="1586638949159" duration="6718000" />
       <workItem from="1586698682523" duration="3000" />
-      <workItem from="1586805132291" duration="9055000" />
+      <workItem from="1586805132291" duration="10332000" />
     </task>
     <task id="LOCAL-00001" summary="DAO layer added">
       <created>1582830654765</created>
@@ -389,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585693020636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Exceptions added servlet and services logic refactored">
+      <created>1586814650866</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586814650867</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +349,8 @@
     <MESSAGE value="Get twits servlet" />
     <MESSAGE value="Many changes" />
     <MESSAGE value="User photo deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="User photo deploy" />
+    <MESSAGE value="Exceptions added servlet and services logic refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exceptions added servlet and services logic refactored" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1586805505155">
@@ -461,50 +410,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586297366231" />
-    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2" timestamp="1586474373496">
+    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2" timestamp="1586814649384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586474373496" />
+    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586814649384" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1586093993591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586093993591" />
-    <state width="1293" height="172" key="GridCell.Tab.0.bottom" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.0.bottom" timestamp="1586815056601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1293" height="172" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.0.center" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586815056601" />
+    <state width="1293" height="299" key="GridCell.Tab.0.center" timestamp="1586815056601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1293" height="172" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.0.left" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586815056601" />
+    <state width="1293" height="299" key="GridCell.Tab.0.left" timestamp="1586815056601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582799179345" />
-    <state width="1293" height="172" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.0.right" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586815056601" />
+    <state width="1293" height="299" key="GridCell.Tab.0.right" timestamp="1586815056601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582799179346" />
-    <state width="1293" height="172" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.1.bottom" timestamp="1586474299016">
+    <state width="1293" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586815056601" />
+    <state width="1293" height="299" key="GridCell.Tab.1.bottom" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299016" />
-    <state width="1293" height="172" key="GridCell.Tab.1.center" timestamp="1586474299016">
+    <state width="1293" height="299" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.1.center" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299016" />
-    <state width="1293" height="172" key="GridCell.Tab.1.left" timestamp="1586474299016">
+    <state width="1293" height="299" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.1.left" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299016" />
-    <state width="1293" height="172" key="GridCell.Tab.1.right" timestamp="1586474299016">
+    <state width="1293" height="299" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.1.right" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299016" />
+    <state width="1293" height="299" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
     <state width="1293" height="227" key="GridCell.Tab.11.bottom" timestamp="1585310884826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -537,22 +486,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="227" key="GridCell.Tab.12.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585310878906" />
-    <state width="1293" height="213" key="GridCell.Tab.13.bottom" timestamp="1586472590146">
+    <state width="1293" height="299" key="GridCell.Tab.13.bottom" timestamp="1586814557616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="213" key="GridCell.Tab.13.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586472590146" />
-    <state width="1293" height="213" key="GridCell.Tab.13.center" timestamp="1586472590146">
+    <state width="1293" height="299" key="GridCell.Tab.13.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586814557616" />
+    <state width="1293" height="299" key="GridCell.Tab.13.center" timestamp="1586814557615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="213" key="GridCell.Tab.13.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586472590146" />
-    <state width="1293" height="213" key="GridCell.Tab.13.left" timestamp="1586472590145">
+    <state width="1293" height="299" key="GridCell.Tab.13.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586814557615" />
+    <state width="1293" height="299" key="GridCell.Tab.13.left" timestamp="1586814557615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="213" key="GridCell.Tab.13.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586472590145" />
-    <state width="1293" height="213" key="GridCell.Tab.13.right" timestamp="1586472590146">
+    <state width="1293" height="299" key="GridCell.Tab.13.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586814557615" />
+    <state width="1293" height="299" key="GridCell.Tab.13.right" timestamp="1586814557615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="213" key="GridCell.Tab.13.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586472590146" />
+    <state width="1293" height="299" key="GridCell.Tab.13.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586814557615" />
     <state width="1293" height="213" key="GridCell.Tab.14.bottom" timestamp="1586290815523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -569,22 +518,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="213" key="GridCell.Tab.14.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586290815523" />
-    <state width="1293" height="172" key="GridCell.Tab.2.bottom" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.2.bottom" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.2.center" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.2.center" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.2.left" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.2.left" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
-    <state width="1293" height="172" key="GridCell.Tab.2.right" timestamp="1586474299015">
+    <state width="1293" height="299" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
+    <state width="1293" height="299" key="GridCell.Tab.2.right" timestamp="1586815052161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="172" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586474299015" />
+    <state width="1293" height="299" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586815052161" />
     <state width="1293" height="213" key="GridCell.Tab.3.bottom" timestamp="1586352528757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -637,10 +586,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583428777816" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586474376904">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586814652833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586474376904" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586814652833" />
     <state x="294" y="48" width="974" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586641143599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
