@@ -1,6 +1,4 @@
 
-u
-Esrc/main/java/bel/huiter/servlets/TwitServlets/CreateTwitServlet.java,0\0\009782d8a8e28be4f3280018f48d15f7a344ad95
 q
 Asrc/main/java/bel/huiter/servlets/TagServlets/GetTagsServlet.java,d\4\d41cbab78c6aa0f17ef18959699a730e41bebc1d
 `
@@ -45,13 +43,19 @@ V
 &src/main/java/bel/huiter/dao/Crud.java,4\7\47fa29818481f70fe47bb3981d21a169b4916afe
 [
 +src/main/java/bel/huiter/json/JsonView.java,8\7\874bd97b23844fac58136bcd40e737ea51f941af
-s
-Csrc/main/java/bel/huiter/servlets/TwitServlets/GetTwitsServlet.java,0\c\0c2ab97458909a1d64e9d381322b53e1dad7641a
-r
-Bsrc/main/java/bel/huiter/servlets/TwitServlets/GetTwitServlet.java,0\a\0a8cf6ef750b6703f50f4bc01ad1537ee192b9ff
 U
 %src/main/java/bel/huiter/jwt/JWT.java,b\0\b004c0480358ae1505b0a0c02402b7a632122419
 Y
 )src/main/java/bel/huiter/models/User.java,f\7\f74504097f29ce7038501fa79db14842dcfafa69
-u
-Esrc/main/java/bel/huiter/servlets/TwitServlets/UpdateTwitServlet.java,5\a\5ac5c85c4e4a196dcbd56a5b9d21b6116a17b612
+h
+8src/main/java/bel/huiter/forms/UserRegistrationForm.java,1\b\1b5657b400dc8368b5d182e932dc0a650b69a520
+a
+1src/main/java/bel/huiter/forms/UserLoginForm.java,b\7\b78936d31fed843d6e90084e82ea200cc75bf386
+\
+,src/main/java/bel/huiter/models/Comment.java,3\8\38b81f69b19c18ec7dfc4d18f1659a3c39080cdc
+Z
+*src/main/java/bel/huiter/models/Photo.java,a\d\ad9f0fd75c98e40b45fcc925ff48cbb9de2c4ccf
+k
+;src/main/java/bel/huiter/form_validators/FormValidator.java,8\3\8315bd5964d8418e540c9929da3bf42cac681e3a
+b
+2src/main/java/bel/huiter/forms/TwitSearchForm.java,9\d\9dd65bd44d1620e69d4288915eccfeae145717f2

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @JsonIdentityInfo(
@@ -34,7 +35,7 @@ public class Twit {
     @JoinTable(name = "twit_tag",
             joinColumns = @JoinColumn(name = "twit_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))
-    private Set<Tag> tags;
+    private List<Tag> tags;
 
     @JsonView({bel.huiter.json.JsonView.Twit.class, bel.huiter.json.JsonView.User.class})
     private Date date;
@@ -76,11 +77,11 @@ public class Twit {
         this.owner = owner;
     }
 
-    public Set<Tag> getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(Set<Tag> tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 

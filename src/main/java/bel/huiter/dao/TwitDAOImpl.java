@@ -1,14 +1,13 @@
 package bel.huiter.dao;
 
+import bel.huiter.forms.TwitSearchForm;
 import bel.huiter.models.Tag;
 import bel.huiter.models.Twit;
-import bel.huiter.models.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -59,28 +58,32 @@ public class TwitDAOImpl implements TwitDAO {
     @Override
     public void delete(Twit twit) {
         List<Tag> tags = getTwitTagsInDB(twit);
-        twit.setTags(tags.stream().filter(this::isTagUsingOnce).collect(Collectors.toSet()));
+        twit.setTags(tags.stream().filter(this::isTagUsingOnce).collect(Collectors.toList()));
 
         TwitDAO.super.delete(twit);
     }
 
     @Override
-    public List<Twit> findTwits(int from, int to, Optional<Date> fromDate, Optional<Date> untilDate, Optional<User> owner, List<String> tags) {
+    public List<Twit> findTwits(TwitSearchForm form) {
         Session session = sessionFactory.openSession();
-        String hqlString = "from Twit twit where ((select count(tag) from Tag tag join tag.twits t where t = twit and tag.body in (:tags)) >= :size)" +
+        String hqlString = "from Twit twit where " +
+                "((select count(tag) from Tag tag join tag.twits t where t = twit and tag.body in (:tags)) >= :size)" +
                 "and (:from = null or twit.date >= :from) " +
                 "and (:until = null or twit.date <= :until) " +
-                "and (:owner = null or twit.owner = :owner)";
+                "and (:owner = null or twit.owner.name = :owner)";
+
         Query<Twit> query = session.createQuery(hqlString, Twit.class);
-        query.setFirstResult(from);
-        query.setMaxResults(to);
-        query.setParameter("from", fromDate.orElse(null));
-        query.setParameter("until", untilDate.orElse(null));
-        query.setParameter("owner", owner.orElse(null));
-        query.setParameterList("tags", tags);
-        query.setParameter("size",(long) tags.size());
+        query.setFirstResult(form.getSkip());
+        query.setMaxResults(form.getSkip() + form.getTop());
+        query.setParameter("from", form.getFromDate());
+        query.setParameter("until", form.getUntilDate());
+        query.setParameter("owner", form.getOwnerName());
+        query.setParameterList("tags", form.getTags());
+        query.setParameter("size",(long) form.getTags().size());
+
         List<Twit> result = query.list();
         session.close();
+
         return result;
     }
 
@@ -107,6 +110,7 @@ public class TwitDAOImpl implements TwitDAO {
         query.setParameter("id", tag.getId());
         Long result = query.getSingleResult();
         session.close();
+
         return result <= 1;
     }
 }

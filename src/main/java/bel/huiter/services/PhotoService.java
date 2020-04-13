@@ -2,20 +2,18 @@ package bel.huiter.services;
 
 import bel.huiter.dao.PhotoDAO;
 import bel.huiter.dao.PhotoDAOImpl;
+import bel.huiter.exceptions.PhotoUploadException;
 import bel.huiter.models.Photo;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 
 import java.io.IOException;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Properties;
+import java.util.*;
 
 public class PhotoService {
 
-    private PhotoDAO photoDAO;
-    private Cloudinary cloudinary;
+    private final PhotoDAO photoDAO;
+    private final Cloudinary cloudinary;
 
     public PhotoService() throws IOException {
         Properties cfg = new Properties();
@@ -24,13 +22,40 @@ public class PhotoService {
         photoDAO = new PhotoDAOImpl();
     }
 
-    public Photo upload(String base64Image) throws IOException {
+    public Set<Photo> uploadAll(List<String> base64Images) throws PhotoUploadException {
+        Set<Photo> photos = new HashSet<>();
+
+        List<String> errors = new ArrayList<>();
+
+        int index = 0;
+        for(String base64Photo: base64Images) {
+            try {
+                photos.add(this.upload(base64Photo));
+            } catch (PhotoUploadException ignored) {
+                errors.add("unable to upload" + index + "photo");
+            }
+        }
+
+        if(!errors.isEmpty()) {
+            String errorMessage = String.join( "\n", errors);
+            throw new PhotoUploadException(errorMessage);
+        }
+
+        return photos;
+    }
+
+    public Photo upload(String base64Image) throws PhotoUploadException {
         Map<?,?> params = ObjectUtils.asMap(
                 "overwrite", true,
                 "format", "png",
                 "resource_type", "image"
         );
-        Map<?,?> uploadResult = cloudinary.uploader().upload(base64Image, params);
+        Map<?,?> uploadResult = null;
+        try {
+            uploadResult = cloudinary.uploader().upload(base64Image, params);
+        } catch (IOException e) {
+            throw new PhotoUploadException();
+        }
         Photo photo = new Photo();
         photo.setUrl(uploadResult.get("url").toString());
         photo.setPublicId(uploadResult.get("public_id").toString());

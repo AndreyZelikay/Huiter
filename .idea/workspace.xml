@@ -7,64 +7,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88d9a0a5-4645-4ca5-87a7-48119e6f2de4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/009782d8a8e28be4f3280018f48d15f7a344ad95" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f198ac649e9becda259d520660a880e2d76965d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a7722b18c8efbd93409953c55aa8f557ee7b892" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/417f3217626422175daac3aff4999336216b5810" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b330d0b26112c174cd159af6954f0ad87bad2677" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd2a79192984fdddb2091c3e8d6304e60eadf536" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d41cbab78c6aa0f17ef18959699a730e41bebc1d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/UpdateTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12667d9a-2f58-450b-b10f-7c89d2f7af05.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12667d9a-2f58-450b-b10f-7c89d2f7af05.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/116c93a1c7f01f312f7c4ceb4b657ab92a78c756" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28c0407f15d810ba54f5534da41eb7d30cb9f850" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/304c42ab1f4dd9bace8607a66ecdcc73bd6acdb0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47fa29818481f70fe47bb3981d21a169b4916afe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/540186e59b1774ee85f57c74987f49fe0fa31955" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83e7fb3d34e593157c1e839ed48ec8b8500bb3b5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/874bd97b23844fac58136bcd40e737ea51f941af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cb8ee0dd6535fa14beb6a0ecfc7dca9632e586c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fd5d6132b196e2faee23600ce88c471c3e72069" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0178c565050f7ad4c9070797cdc723fb504d703" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b004c0480358ae1505b0a0c02402b7a632122419" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b41abf47647379224d020818fb76d1fa9beb01aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b53a5ae5291762bb65ef25e32ebe80374c716578" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba9016c8c946f896d7dec672322753d34916d799" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/deb776ae779499472a6192f58babc21df784819c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f74504097f29ce7038501fa79db14842dcfafa69" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdc16df95f85341f5c34cefe531f0676a9ac6adb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentCreateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentDeleteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/CommentUpdateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/PhotoUploadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitCreationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitDeleteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/TwitUpdateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/exceptions/UserRegistrationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/CommentValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/FormValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/TwitValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/UserRegistrationValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/form_validators/ValidationConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/CommentForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/TwitForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/TwitSearchForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/UserLoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/forms/UserRegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Huiter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Huiter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/009782d8a8e28be4f3280018f48d15f7a344ad95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/CommentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/CommentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/CommentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/CommentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/PhotoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/PhotoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/PhotoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/PhotoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/SessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/SessionFactoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TagDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TagDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TagDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TagDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/TwitDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Filters/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/filters/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Filters/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/filters/CORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/JWT/JWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/jwt/JWT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/JWT/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/jwt/SecurityConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Json/JsonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/json/JsonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Services/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/PhotoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Services/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Services/TwitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TwitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/CommentServlets/CreateCommentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/CreateCommentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/CommentServlets/GetCommentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/GetCommentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/TagServlets/GetTagsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TagServlets/GetTagsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/TwitServlets/CreateTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/CreateTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/TwitServlets/DeleteTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/DeleteTwitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/TwitServlets/GetTwitsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/TwitServlets/PostLikeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/PostLikeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/UserServlets/GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/GetUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/UserServlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/Servlets/UserServlets/UserRegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserRegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/dao/TwitDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/Twit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/Crud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/Twit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/Twit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bel/huiter/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bel/huiter/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/PhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TwitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/TwitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/CreateCommentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/comment_servlets/CreateCommentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/CommentServlets/GetCommentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/comment_servlets/GetCommentsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TagServlets/GetTagsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/tag_servlets/GetTagsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/CreateTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/CreateTwitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/DeleteTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/DeleteTwitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/GetTwitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/GetTwitsServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/PostLikeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/SearchTwitsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/TwitServlets/UpdateTwitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/twit_servlets/UpdateTwitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/GetCurrentUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserLoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/UserServlets/UserRegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bel/huiter/servlets/user_servlets/UserRegistrationServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,36 +77,6 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="huiter: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,23 +98,16 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1YLr0JMZNlQKBsZ2ClTtPXxk3IV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -333,28 +300,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -403,6 +348,11 @@
       <workItem from="1586292955961" duration="8035000" />
       <workItem from="1586350884563" duration="6781000" />
       <workItem from="1586472702814" duration="1482000" />
+      <workItem from="1586613998955" duration="981000" />
+      <workItem from="1586618426946" duration="4325000" />
+      <workItem from="1586638949159" duration="6718000" />
+      <workItem from="1586698682523" duration="3000" />
+      <workItem from="1586805132291" duration="9055000" />
     </task>
     <task id="LOCAL-00001" summary="DAO layer added">
       <created>1582830654765</created>
@@ -443,7 +393,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DAO layer added" />
@@ -454,10 +404,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="User photo deploy" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1585230985065">
+    <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1586805505155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1585230985065" />
+    <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1586805505155" />
     <state x="552" y="178" key="#Auto_Import" timestamp="1582827242441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -478,11 +428,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" width="1092" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585691740975" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586471669976">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586814218556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582799809052" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586471669976" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586814218556" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585691994263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -495,18 +445,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="175" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585691991105" />
-    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585691603134">
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586618164007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585691603134" />
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586618164007" />
+    <state x="621" y="264" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586625641267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="621" y="264" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586625641267" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586814237658">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586814237658" />
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586297366231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586297366231" />
-    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2" timestamp="1585947848094">
+    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2" timestamp="1586474373496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585947848094" />
+    <state x="585" y="114" width="1027" height="917" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586474373496" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1586093993591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -679,27 +637,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583428777816" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1585947853514">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586474376904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585947853514" />
-    <state x="294" y="48" width="974" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586351617445">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586474376904" />
+    <state x="294" y="48" width="974" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586641143599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="48" width="974" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586351617445" />
+    <state x="294" y="48" width="974" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586641143599" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1582743577342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582743577342" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586292955856">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586614001233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="224" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582798421328" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586292955856" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586614001233" />
     <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582809464912">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1582809464912" />
+    <state x="690" y="281" key="extract.method.dialog" timestamp="1586645143450">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="281" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586645143450" />
     <state x="342" y="215" key="new project wizard" timestamp="1586094030846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

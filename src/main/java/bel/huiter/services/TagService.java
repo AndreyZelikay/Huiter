@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TagService {
 
-    private TagDAO tagDAO;
+    private final TagDAO tagDAO;
 
     public TagService() {
         tagDAO = new TagDAOImpl();

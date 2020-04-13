@@ -2,15 +2,23 @@ package bel.huiter.services;
 
 import bel.huiter.dao.UserDAO;
 import bel.huiter.dao.UserDAOImpl;
+import bel.huiter.exceptions.UserRegistrationException;
+import bel.huiter.form_validators.UserRegistrationValidator;
+import bel.huiter.forms.UserLoginForm;
+import bel.huiter.forms.UserRegistrationForm;
+import bel.huiter.jwt.JWT;
 import bel.huiter.models.User;
-import org.apache.commons.codec.digest.DigestUtils;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hibernate.exception.ConstraintViolationException;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 public class UserService {
 
-    private UserDAO userDAO;
+    private final UserDAO userDAO;
     private PhotoService photoService;
 
     public UserService() {
@@ -22,33 +30,58 @@ public class UserService {
         userDAO = new UserDAOImpl();
     }
 
-    public Optional<User> findById(long id) {
-        return userDAO.findById(id);
+    public boolean loginUser(UserLoginForm form) {
+        Optional<User> userOptional = userDAO.findByNameAndPassword(form.getName(), form.getPassword());
+        return userOptional.isPresent();
     }
 
-    public Optional<User> findUserInDB(User user) {
-        String password = DigestUtils.md5Hex(user.getPassword());
-        return userDAO.findByNameAndPassword(user.getName(), password);
+    public void registerUser(UserRegistrationForm form) throws UserRegistrationException {
+        UserRegistrationValidator validator = new UserRegistrationValidator();
+
+        List<String> validationErrors = validator.validate(form);
+
+        if(validationErrors.isEmpty()) {
+            try {
+                User user = new User();
+                user.setName(form.getName());
+                user.setPassword(form.getPassword());
+                user.setUserPhoto(photoService.upload(form.getBase64Photo()));
+
+                userDAO.save(user);
+            } catch (IOException e) {
+                validationErrors.add("invalid photo");
+            } catch (ConstraintViolationException e) {
+                validationErrors.add("user already exist!");
+            }
+        }
+
+        if(!validationErrors.isEmpty()) {
+            String errorMessage = String.join("\n", validationErrors);
+            throw new UserRegistrationException(errorMessage);
+        }
     }
 
-    public void saveToDB(User user) {
-        userDAO.save(user);
-    }
+    public Optional<User> getUserFromJWT(String jwt) {
+        ObjectMapper objectMapper = new ObjectMapper();
 
-    public Optional<User> findByName(String name) {
-        return userDAO.findByName(name);
-    }
-
-    public void updateInDB(User user) {
-        userDAO.update(user);
-    }
-
-    public void deleteFromDB(User user) {
+        User user = null;
         try {
+            user = objectMapper.readValue(JWT.decodeJWT(jwt).getSubject(), User.class);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return Optional.ofNullable(user);
+    }
+
+    public void deleteUserFromDB(Long id) {
+        try {
+            User user = new User();
+            user.setId(id);
             photoService.delete(user.getUserPhoto());
+            userDAO.delete(user);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        userDAO.delete(user);
     }
 }
