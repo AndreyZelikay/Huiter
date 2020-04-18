@@ -75,6 +75,10 @@ public class UserService {
         return Optional.ofNullable(user);
     }
 
+    public Optional<User> findById(Long id) {
+        return userDAO.findById(id);
+    }
+
     public void deleteUserFromDB(Long id) {
         try {
             User user = new User();

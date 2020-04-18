@@ -8,13 +8,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class TwitDAOImpl implements TwitDAO {
 
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     public TwitDAOImpl(){
         sessionFactory = SessionFactoryUtil.getInstance().getSessionFactory();
@@ -27,31 +28,13 @@ public class TwitDAOImpl implements TwitDAO {
 
     @Override
     public void save(Twit twit) {
-        List<Tag> tags;
-        if(twit.getTags() != null && (tags = getTwitTagsInDB(twit)) != null && !tags.isEmpty()) {
-            twit.getTags().forEach(tag -> {
-                int index;
-                if((index = tags.indexOf(tag)) != -1) {
-                    tag.setId(tags.get(index).getId());
-                }
-            });
-        }
-
+        prepareTwitTagsToSave(twit);
         TwitDAO.super.save(twit);
     }
 
     @Override
     public void update(Twit twit) {
-        List<Tag> tags;
-        if(twit.getTags() != null && (tags = getTwitTagsInDB(twit)) != null && !tags.isEmpty()) {
-            twit.getTags().forEach(tag -> {
-                int index;
-                if((index = tags.indexOf(tag)) != -1 && isTagUsingOnce(tags.get(index))) {
-                    tag.setId(tags.get(index).getId());
-                }
-            });
-        }
-
+        prepareTwitTagsToSave(twit);
         TwitDAO.super.update(twit);
     }
 
@@ -87,6 +70,29 @@ public class TwitDAOImpl implements TwitDAO {
         return result;
     }
 
+    private void prepareTwitTagsToSave(Twit twit) {
+        if(twit.getTags() == null) {
+            return;
+        }
+
+        twit.getTags().sort(Comparator.comparing(Tag::getBody));
+        List<Tag> tagsFromDB = getTwitTagsInDB(twit);
+
+        for(int i = 0; i < twit.getTags().size(); ) {
+            Tag currentTag = twit.getTags().get(i);
+            int indexOfCurrentTagInDB = tagsFromDB.indexOf(currentTag);
+
+            if (indexOfCurrentTagInDB != -1) {
+                currentTag.setId(tagsFromDB.get(indexOfCurrentTagInDB).getId());
+            }
+
+            while (i < twit.getTags().size() && twit.getTags().get(i).equals(currentTag)) {
+                twit.getTags().set(i, currentTag);
+                i++;
+            }
+        }
+    }
+
     private List<Tag> getTwitTagsInDB(Twit twit) {
         Session session = sessionFactory.openSession();
         Query<Tag> query;
@@ -106,7 +112,7 @@ public class TwitDAOImpl implements TwitDAO {
 
     private boolean isTagUsingOnce(Tag tag) {
         Session session = sessionFactory.openSession();
-        Query<Long> query = session.createQuery("select count (twit) from Twit as twit join Tag tag on tag.id = :id", Long.class);
+        Query<Long> query = session.createQuery("select count(twit) from Twit as twit join twit.tags tag where tag.id = :id", Long.class);
         query.setParameter("id", tag.getId());
         Long result = query.getSingleResult();
         session.close();
